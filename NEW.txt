@@ -7,10 +7,10 @@ str=""
 while [ $i -le 25 ]
 do
   let NUmbER=$i*4
-  printf "\e[0m [%-25s][%d%%]%c\r" "$str" "$NUmbER" "${arr[$index]}"
+  printf "\e[0m -%-25s-%d%%-%c\r" "$str" "$NUmbER" "${arr[$index]}"
   sleep 0.2
   let i++
-  str+='>'
+  str+='#'
 done
  echo "|[>>>>>>>>>>>>>>>>>>>>>>>>>][100%]"
 echo "注入完成 开始格机..."
