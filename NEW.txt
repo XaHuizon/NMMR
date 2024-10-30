@@ -1,3 +1,3 @@
 2.60
 echo "\033[0;33;1m[-]最新版本>V_2.60-Official正式版\033[0m"
-echo "\033[0;32;1m[>]更新地址:https://wwp.lanzoup.com/iAV2B2dt11cj\033[0m"
+echo "\033[0;32;1m[>]更新地址:https://wwp.lanzoup.com/iZPVD2dt141g\033[0m"
