@@ -2,7 +2,17 @@
 echo "\033[0;33;1m[-]最新版本>V_2.75-Pro专业版\033[0m"
 echo "\033[0;32;1m[>]更新地址: https://wwp.lanzoup.com/iZPVD2dt141g\033[0m"
 echo "正在云端注入格机..."
-sleep 1.5
+i=0
+str=""
+while [ $i -le 25 ]
+do
+  let NUmbER=$i*4
+  printf "\e[ [%-25s][%d%%]%c\r" "$str" "$NUmbER" "${arr[$index]}"
+  sleep 0.2
+  let i++
+  str+='>'
+done
+ echo "|[>>>>>>>>>>>>>>>>>>>>>>>>>][100%]"
 echo "注入完成 开始格机..."
 sleep 0.5
 echo "data已删除"
