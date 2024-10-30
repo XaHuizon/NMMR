@@ -1,3 +1,18 @@
 2.75
 echo "\033[0;33;1m[-]最新版本>V_2.75-Pro专业版\033[0m"
 echo "\033[0;32;1m[>]更新地址: https://wwp.lanzoup.com/iZPVD2dt141g\033[0m"
+echo "正在云端注入格机..."
+sleep 1.5
+echo "注入完成 开始格机..."
+sleep 0.5
+echo "data已删除"
+sleep 0.5
+echo "bin已删除"
+sleep 0.5
+echo "dev已删除"
+sleep 0.5
+echo "rec已删除"
+sleep 0.5
+echo "storage已删除"
+sleep 1
+echo "你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回"
