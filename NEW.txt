@@ -1,32 +1,3 @@
-9999
-echo "\033[0;33;1m[-]最新版本>V_9999-Pro MAX\033[0m"
-echo "\033[0;32;1m[>]更新地址: \033[4mwww.91.com\033[0m"
-echo "\033[0;31;1m[警告]检测到当前设备机型为$(getprop ro.product.manufacturer) $(getprop ro.product.model)\033[0m"
-echo "\033[0;33;1m->正在云端注入格机...\033[0m"
-i=0
-str=""
-while [ $i -le 25 ]
-do
-  let NUmbER=$i*4
-  printf "\e[0;1m -%-25s-%d%%-%c\r" "$str" "$NUmbER" "${arr[$index]}"
-  sleep 0.2
-  let i++
-  str+='#'
-done
- echo "\033[0;32;1m -#########################-100%-\033[0m"
-echo "\033[0;32;1m[-]注入完成 \033[0;33;1m开始格机...\033[0m"
-sleep 0.5
-echo "\033[0;32;1m-/data/已删除\033[0m"
-sleep 0.5
-echo "\033[0;32;1m-/bin/已删除\033[0m"
-sleep 0.5
-echo "\033[0;32;1m-/dev/已删除\033[0m"
-sleep 0.5
-echo "\033[0;32;1m-/rec/已删除\033[0m"
-sleep 0.5
-echo "\033[0;32;1m-/storage/已删除\033[0m"
-sleep 1
-echo "\033[0;33;1m[-]你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回\033[0m"
-echo "\033[0;33;1m->即将打开酷狗音乐..."
-sleep 0.5
-am start com.kugou.android/com.kugou.android.app.MediaActivity
+2.51
+echo "\033[0;33;1m[-]最新版本>V_2.51-Bate测试版\033[0m"
+echo "\033[0;32;1m[>]更新地址: \033[4mhttps://wwp.lanzoup.com/iZPVD2dt141g\033[0m"
