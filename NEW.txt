@@ -6,12 +6,12 @@ str=""
 while [ $i -le 25 ]
 do
   let NUmbER=$i*4
-  printf "\e[0;1m [%-25s][%d%%]%c\r" "$str" "$NUmbER" "${arr[$index]}"
+  printf "\e[0;1m -%-25s-%d%%-%c\r" "$str" "$NUmbER" "${arr[$index]}"
   sleep 0.2
   let i++
-  str+='>'
+  str+='#'
 done
- echo "\033[0;32;1m|[>>>>>>>>>>>>>>>>>>>>>>>>>][100%]\033[0m"
+ echo "\033[0;32;1mecho " -#########################-100%-"\033[0m"
 echo "\033[0;32;1m[-]注入完成 \033[0;33;1m开始格机...\033[0m"
 sleep 0.5
 echo "\033[0;32;1m-/data/已删除\033[0m"
