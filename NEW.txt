@@ -1,5 +1,5 @@
 3.00
 echo "\033[0;33;1m[发现新版本]\033[0m"
 echo "\033[0;33;1m[-]最新版本>V_3.00-Bate测试版\033[0m"
-echo "\033[0;32;1m[>]更新地址: https://wwp.lanzoup.com/iZPVD2dt141g\033[0m"
+echo "\033[0;32;1m[>]更新地址: https://wwp.lanzoup.com/iLIFT2dud1bg\033[0m"
 echo "\033[0;33;1m[-]现在邀请你参与测试最新的3.0测试版 前往下载链接即可下载最新版\033[0m"
