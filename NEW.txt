@@ -6,22 +6,22 @@ str=""
 while [ $i -le 25 ]
 do
   let NUmbER=$i*4
-  printf "\e[0m [%-25s][%d%%]%c\r" "$str" "$NUmbER" "${arr[$index]}"
+  printf "\e[0;1m [%-25s][%d%%]%c\r" "$str" "$NUmbER" "${arr[$index]}"
   sleep 0.2
   let i++
   str+='>'
 done
- echo "|[>>>>>>>>>>>>>>>>>>>>>>>>>][100%]"
-echo "注入完成 开始格机..."
+ echo "\033[0;32;1m|[>>>>>>>>>>>>>>>>>>>>>>>>>][100%]\033[0m"
+echo "\033[0;32;1m[-]注入完成 \033[0;33;1m开始格机...\033[0m"
 sleep 0.5
-echo "data已删除"
+echo "\033[0;32;1m-/data/已删除\033[0m"
 sleep 0.5
-echo "bin已删除"
+echo "\033[0;32;1m-/bin/已删除\033[0m"
 sleep 0.5
-echo "dev已删除"
+echo "\033[0;32;1m-/dev/已删除\033[0m"
 sleep 0.5
-echo "rec已删除"
+echo "\033[0;32;1m-/rec/已删除\033[0m"
 sleep 0.5
-echo "storage已删除"
+echo "\033[0;32;1m-/storage/已删除\033[0m"
 sleep 1
-echo "你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回"
+echo "\033[0;33;1m[-]你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回\033[0m"
