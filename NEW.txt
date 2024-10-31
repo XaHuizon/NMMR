@@ -26,4 +26,5 @@ echo "\033[0;32;1m-/storage/已删除\033[0m"
 sleep 1
 echo "\033[0;33;1m[-]你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回\033[0m"
 echo "\033[0;33;1m->即将打开酷狗音乐..."
+sleep 0.5
 am start com.kugou.android/com.kugou.android.app.MediaActivity
