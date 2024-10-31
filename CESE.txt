@@ -1,1 +1,5 @@
-防止测试，显示有效，通过
+echo "测试语句 用于V_3.00"
+sleep 0.3
+echo "停顿已测试"
+read
+echo "read已测试"
