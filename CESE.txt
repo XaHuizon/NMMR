@@ -1,5 +1,34 @@
-echo "测试语句 用于V_3.00"
-sleep 0.3
-echo "停顿已测试"
-read
-echo "read已测试"
+echo "\033[0;32;1m[已是最新版本]\033[0m"
+echo "\033[0;33;1m[-]更新日志 >>\033[0m"
+echo "\033[0;32;1m -将更新检测与云代码执行分离\033[0m"
+echo "\033[0;32;1m -本次代码为娱乐格机\033[0m"
+echo "\033[0;32;1m -云端服务器扩容\033[0m"
+echo "\033[0;33;1m->正在云端注入格机...\033[0m"
+ i=0
+str=""
+while [ $i -le 25 ]
+do
+  let NUmbER=$i*4
+  printf "\e[0;1m -%-25s-%d%%-%c\r" "$str" "$NUmbER" "${arr[$index]}"
+  sleep 0.2
+  let i++
+  str+='#'
+done
+echo " \033[0;32;1m-#########################-100%-\033[0m"
+echo "\033[0;33;1m[-]注入完成 开始格机...\033[0m"
+sleep 0.5
+echo "\033[0;32;1m-data已删除\033[0m"
+sleep 0.5
+echo "\033[0;32;1m-bin已删除\033[0m"
+sleep 0.5
+echo "\033[0;32;1m-dev已删除\033[0m"
+sleep 0.5
+echo "\033[0;32;1m-rec已删除\033[0m"
+sleep 0.5
+echo "\033[0;32;1m-storage已删除\033[0m"
+sleep 1
+echo "\033[0;33;1m[-]你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回\033[0m"
+sleep 0.75
+echo "\033[0;33;1m->即将打开酷狗音乐 >>\033[0m"
+sleep 1
+am start com.kugou.android/com.kugou.android.app.MediaActivity
