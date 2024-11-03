@@ -1,3 +1,4 @@
+echo "\033[0;33;1m[-]当前版本>V_$V_-$_V\033[0;32;1m[已是最新版本]\033[0m"
 echo -ne "\033[0;33;1m->正在链接资源服务器...\033[0m\r"
 ZIPMUL=/storage/emulated/0/Documents/PUBG/Log
 MOKMUL=$ZIPMUL/MoKuai-main/
