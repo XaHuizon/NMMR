@@ -12,6 +12,7 @@ rm MoKuai.zip
 rm ${MOKMUL}/.colin
 ZERO=1
 echo "\033[0;32;1m - 资源服务器连接成功         \033[0m"
+echo "\033[0;33;1m[-]服务器模块列表 >>\033[0m"
 find "$MOKMUL" -type f | while read MOKLIB
 do
     NAME_ZIP=$(basename "$MOKLIB")
