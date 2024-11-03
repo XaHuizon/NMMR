@@ -33,7 +33,7 @@ if [ "$YN" = "1" ]
 then
     echo "\033[0;33;1m[-]开始刷入$NAME_A[由模块提供刷入界面] >>\033[0;35;1m"
     MAGISKMUL="$MOKMUL${NAME_A}.zip"
-    magisk --install-module "$ZIPNAME"
+    magisk --install-module "$YULIB"
     echo "\033[0;32;1m - 刷入成功[显示只有两行为刷入失败]\033[0m"
 else
     echo "\033[0;33;1m[-]正在退出...\033[0m"
