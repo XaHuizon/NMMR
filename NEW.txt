@@ -3,71 +3,40 @@ echo "\033[0;33;1m[-]经过思考 决定恢复对[\033[0;32;1mV_2.5-Bate测试�
 echo "\033[0;33;1m[-]当前版本为特殊版本 今后将会当做正式版持续更新云端代码\033[0m"
 echo "\033[0;32;1m - 最新版本>V_2.00-Official正式版\033[0m"
 echo "\033[0;32;1m[>]更新链接: \033[4mhttps://wwp.lanzoup.com/iTFF32dw9wkj\033[0m"
-NOSEESE=https://raw.githubusercontent.com/XaHuizon/NMMR/refs/heads/main/%E9%9A%90%E8%97%8FSELinux%E4%B8%BA%E5%AE%BD%E5%AE%B9%E6%A8%A1%E5%BC%8F.zip
-NOBLACK=https://raw.githubusercontent.com/XaHuizon/NMMR/refs/heads/main/%E8%87%AA%E5%8A%A8%E6%95%91%E7%A0%96%E6%A8%A1%E5%9D%97.zip
-ALL=NULL.log
-LOG=刷入失败原因.log
-LOG_A=刷入失败原因_A.log
-NULL=
-echo "\033[0;33;1m[-]本次执行将会为Magisk刷入隐藏SELinux宽容模式模块\033[0m"
-echo "\033[0;35;1m[来源告知]该模块来自爱玩机工具箱 作者:ikun\033[0m"
-echo "\033[0;31;1m[!]模块已经过复审并且实际有效 可以有效隐藏SELinux为宽容模式 适用于全防脚本玩家 [详情前往爱玩机查看] 该模块对机型支持度为未知 在刷入之前确保已刷入自动救砖 否则变砖后无法救回 如未刷入自动救砖可在下方菜单中选择刷入自动救砖\033[0m"
-    echo "\033[0;33;1m->是否刷入 >>\033[0m"
-    echo "\033[0;36;1m›1·-刷入隐藏SELinux宽容模式模块\033[0m"
-    echo "\033[0;36;1m›2·-刷入自动救砖模块[作者:奋斗的小青年]\033[0m"
-    echo "\033[0;36;1m›3·-退出执行\033[0m"
-    echo -ne "\033[0;36;1m[>]*ᐷ\033[0m"
-    read B
-    if [ "$B" = "1" ]
-    then
-        echo "\033[0;33;1m[-]即将开始刷入隐藏SELinux宽容模式模块 >>\033[0m"
-        echo "\033[0;33;1m->正在从云端下载模块-[大小:7.48KB]...\033[0m"
-        curl -O -s "$NOSEESE"
-        MKNAME_ZIP=隐藏SELinux为宽容模式.zip
-        mv %E9%9A%90%E8%97%8FSELinux%E4%B8%BA%E5%AE%BD%E5%AE%B9%E6%A8%A1%E5%BC%8F.zip $MKNAME_ZIP
-    elif [ "$B" = "2" ]
-    then
-        echo "\033[0;33;1m[-]即将开始刷入自动救砖模块 >>\033[0m"
-        echo "\033[0;33;1m->正在从云端下载模块-[大小:5.49KB]...\033[0m"
-        curl -O -s "$NOBLACK"
-        MKNAME_ZIP=自动救砖模块.zip
-        mv %E8%87%AA%E5%8A%A8%E6%95%91%E7%A0%96%E6%A8%A1%E5%9D%97.zip $MKNAME_ZIP
-    else
-        echo "\033[0;33;1m[-]正在退出...\033[0m"
-        exit 0
-    fi
-WHTBIG=14
-FILEBIG=$(stat -c%s "$MKNAME_ZIP")
-if [ "$FILEBIG" != "$WHTBIG" ]
-then
-    echo "\033[0;32;1m - 下载完成\033[0m"
-    echo "\033[0;33;1m[-]是否立即刷入 >>\033[0m"
-else
-    echo "\033[0;31;1m[!]下载失败 \033[0;33;1m网络异常或资源已从服务器中移除 检查网络连接是否为科学上网或检查服务器中资源是否正常\033[0m"
-    rm $MKNAME_ZIP
-    exit 0
-fi
-ZIPNAME="./$MKNAME_ZIP"
+echo -ne "\033[0;33;1m->正在链接资源服务器...\033[0m\r"
+ZIPMUL=/storage/emulated/0/Documents/PUBG/Log
+MOKMUL=$ZIPMUL/MoKuai-main/
+curl -s -o MoKuai.zip https://codeload.github.com/XaHuizon/MoKuai/zip/refs/heads/main
+unzip -q -o MoKuai.zip -d $ZIPMUL
+rm MoKuai.zip
+rm ${MOKMUL}/.colin
+ZERO=1
+echo "\033[0;32;1m - 资源服务器连接成功[共12.1KB]\033[0m"
+find "$MOKMUL" -type f | while read MOKLIB
+do
+    NAME_ZIP=$(basename "$MOKLIB")
+    NAME=${NAME_ZIP%.*}
+    echo "\033[0;36;1m›${ZERO}·-$NAME\033[0m"
+    ((ZERO++))
+done
+echo -ne "\033[0;33;1m->选择要安装的模块*ᐷ\033[0;1m"
+read XUAN
+YULIB=$(find "$MOKMUL" -type f | sed "${XUAN}q;d")
+NAME_ZIP_A=$(basename "$YULIB")
+NAME_A=${NAME_ZIP_A%.*}
+echo "\033[0;33;1m[-]本次执行将会为Magisk刷入$NAME_A\033[0m"
+echo "\033[0;33;1m->是否刷入 >>\033[0m"
 echo -ne "\033[0;36;1m[1›刷入/2›取消]*ᐷ\033[0;1m"
-read MK
-if [ "$MK" = "1" ]
+read YN
+if [ "$YN" = "1" ]
 then
-    echo "\033[0;33;1m[-]开始刷入[由模块提供刷入界面] >>\033[0m"
+    echo "\033[0;33;1m[-]开始刷入$NAME_A[由模块提供刷入界面] >>\033[0;35;1m"
+    MAGISKMUL="$MOKMUL${NAME_A}.zip"
+    magisk --install-module "$ZIPNAME"
+    echo "\033[0;32;1m - 刷入成功[显示只有两行为刷入失败]\033[0m"
 else
-    echo "\033[0;33;1m[-]已取消刷入 正在退出...\033[0m"
+    echo "\033[0;33;1m[-]正在退出...\033[0m"
     exit 0
-fi
-echo -ne "\033[0;35;1m"
-magisk --install-module "$ZIPNAME" 2>> $LOG
-echo -ne "\033[0m"
-if [ -e "$LOG" ]
-then
-    echo "\033[0;31;1m - 刷入失败\033[0m"
-    echo "\033[0;33;1m[提示]检查是否已ROOT或已安装Magisk\033[0m"
-    rm $LOG
-    exit 0
-else
-    echo "\033[0;32;1m - 刷入成功\033[0m"
 fi
 echo "\033[0;33;1m->是否立即重启 >>\033[0m"
 echo -ne "\033[0;36;1m[1›重启/2›打开Magisk查看/3›退出]*ᐷ\033[0;1m"
@@ -79,6 +48,7 @@ then
         echo -ne "\033[0;33;1m->$S秒后重启...\033[0m\r"
         sleep 1
     done
+    rm -rf $MOKMUL
     reboot
 elif [ "$MAGISK" = "2" ]
 then
@@ -87,10 +57,12 @@ then
         echo -ne "\033[0;33;1m->$S_秒后打开Magisk >>\033[0m\r"
         sleep 0.5
     done
+    rm -rf $MOKMUL
     ECHOD=$(am start io.github.huskydg.magisk/com.topjohnwu.magisk.ui.MainActivity)
     ECHOP=$(am start com.topjohnwu.magisk/com.topjohnwu.magisk.ui.MainActivity)
     exit 0
 else
     echo "\033[0;33;1m[-]正在退出...\033[0m"
+    rm -rf $MOKMUL
     exit 0
 fi
